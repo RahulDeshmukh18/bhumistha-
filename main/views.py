@@ -30,5 +30,5 @@ def index(request):
     
     return render(request, 'main/index.html', {'main_list': main_list, 'about_list': about_list, 'vision_list': vision_list, 'mission_list': mission_list, 'objective_list': objective_list, 'team_list': team_list, 'research_list': research_list, 'innovation_list': innovation_list, 'project_list': project_list, 'application_list': application_list})
 
-def your_view(request):
+def casestudy(request):
    return render(request, 'main/casestudy.html')
