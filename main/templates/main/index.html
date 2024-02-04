@@ -1,0 +1,331 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'main/style.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>GEM</title>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html">BHUMISTHA</a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="#about-us">ABOUT US</a></li>
+                    <li><a href="#research">RESEARCH</a></li>
+                    <li><a href="#innovation">INNOVATION</a></li>
+                    <li><a href="#projects">PROJECTS</a></li>
+                    <li><a href="#application">APPLICATION</a></li>
+                    <li><a href="#career">CAREER</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>{{ main_list.tagline }}</h1>
+            <p>{{ main_list.content }}</p>
+            <a href="https://bis2.vercel.app/" class="hero-btn">Visit Us to Know More</a>
+        </div>
+    </section>
+
+    <!-- Abou us -->
+    <section id="about-us" class="about-us">
+        <div class="headline-black">ABOUT <span class="blue">US</span></div>
+        <div class="about-us-content">
+            <img src="{{ about_list.image.url }}" alt="About Us Image">
+            <div class="about-info">
+                <h2 style="text-align: start;">{{ about_list.tagline }}</h2>
+            <p style="text-align: start;">{{ about_list.content }}</p>
+        </div>
+        </div>
+    </section>
+
+    <!-- Our vision -->
+    <section id="about-us" class="vision-section">
+        <div class="headline-white">OUR <span class="blue">VISION</span></div>
+    
+        <div class="vision-box">
+            {% for vision_item in vision_list %}
+                <div class="box">
+                    <img src="{{ vision_item.image.url }}" alt="">
+                    <div class="box-text">
+                        <p>{{ vision_item.description }}</p>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+
+    <!-- Our Mission -->
+    <section id="about-us" class="mission-section">
+        <div class="headline-black">OUR <span class="blue">MISSION</span></div>
+
+        <div class="mission-container">
+            {% for mission in mission_list %}
+            <div class="mission">
+                <img src="{{ mission.image.url }}" alt="Mission 1 Image">
+                <div class="mission-text">
+                    <h3>{{ mission.tagline }}</h3>
+                    <p>{{ mission.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- OUR OBJECTIVES -->
+    <section id="about-us" class="objectives-section">
+        <div class="headline-black">OUR <span class="blue">OBJECTIVE</span></div>
+
+        <div class="objectives-container">
+            <div class="objective">
+                {% for objective in objective_list %}
+                <img src="{{ objective.image.url }}" alt="Objective 1 Image">
+                <div class="objective-text">
+                    <h3>{{ objective.tagline }}</h3>
+                    <p>{{ objective.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {% comment %} team section {% endcomment %}
+    <section id="about-us" class="gem-team-section">
+        <div class="headline-white">OUR <span class="blue">TEAM</span></div>
+
+        <div class="gem-team-container">
+            {% for team in team_list %}
+            <div class="team-member">
+                <div class="member-circle">
+                    <img src="{{ team.image.url }}" alt="{{ team.name }}">
+                </div>
+                <div class="member-info">
+                    <h3>{{ team.name }}</h3>
+                    <p>{{ team.designation }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Services -->
+
+    <section class="services">
+        {% comment %} <div class="headings">
+            <h1>SERVICES</h1>
+            <p>we not only provide products but also offer after-sales services to ensure hassle-free installation and seamless operation of the products.</p>
+        </div> {% endcomment %}
+
+        <div class="section-title">
+            <h2>Services</h2>
+            <p>we not only provide products but also offer after-sales services to
+              ensure hassle-free installation and seamless operation of the products.</p>
+          </div>
+        <div class="cards">
+            <div class="cells">
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon"><i class="fas fa-check-square "></i></div>
+                    <h4 class="title"><a href="">Easy Installation</a></h4>
+                    <p class="description">Site preparation, Unloading and inspection, Assembly, Placement, Connection,
+                      Testing, Commissioning</p>
+                  </div>
+            </div>
+            <div class="cells">
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon"><i class="fas fa-industry"></i></div>
+                    <h4 class="title"><a href="">Training</a></h4>
+                    <p class="description">Site preparation, Unloading and inspection, Assembly, Placement, Connection,
+                      Testing, Commissioning</p>
+                  </div>
+            </div>
+            <div class="cells">
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                    <div class="icon"><i class="fas fa-cogs "></i></div>
+                    <h4 class="title"><a href="">Maintenance</a></h4>
+                    <p class="description">Site preparation, Unloading and inspection, Assembly, Placement, Connection,
+                      Testing, Commissioning</p>
+                  </div>
+            </div>
+            <div class="cells">
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon"><i class="fas fa-refresh"></i></div>
+                    <h4 class="title"><a href="">Repair</a></h4>
+                    <p class="description">Site preparation, Unloading and inspection, Assembly, Placement, Connection,
+                      Testing, Commissioning</p>
+                  </div>
+            </div>
+            <div class="cells">
+                <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                    <div class="icon"><i class="fas fa-exclamation-triangle "></i></div>
+                    <h4 class="title"><a href="">Technical Support</a></h4>
+                    <p class="description">Site preparation, Unloading and inspection, Assembly, Placement, Connection,
+                      Testing, Commissioning</p>
+                  </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Services -->
+
+    <!-- Research -->
+    <section id="research" class="research-section">
+        <div class="headline-black">OUR <span class="blue">RESEARCH</span></div>
+    
+        <div class="research-grid">
+            <!-- Boxes with blue outline -->
+            {% for research in research_list %}
+            <div class="research-item">
+                <img src="{{ research.image.url }}" alt="{{ research.tagline }}">
+                <div class="research-text">
+                    <h3>{{ research.tagline }}</h3>
+                    <p>{{ research.description }}</p>
+                    <a href="{{ research.url }}" class="read-more-button">Read More -></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+    
+    <!-- INNOVATIONS -->
+    <section id="innovation" class="innovation-section">
+        <div class="headline-white">INNOVATION <span class="blue">BY OUR TEAM</span></div>
+
+        <div class="innovation-container">
+            {% for innovation in innovation_list %}
+            <div class="innovation-item">
+                <img src="{{ innovation.image.url }}" alt="{{ innovation.tagline }}">
+                <div class="innovation-content">
+                    <h4>{{ innovation.tagline }}</h4>
+                    <p>{{ innovation.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+
+
+   <!-- Projects section -->
+    <section id="projects" class="projects-section">
+        <div class="headline-black">OUR <span class="blue">PROJECTS</span></div>
+
+        <div class="projects-container">
+            {% for project in project_list %}
+            <div class="project-item">
+                <img src="{{ project.image.url }}" alt="{{ project.tagline }}">
+                <div class="project-content">
+                    <h4>{{ project.tagline }}</h4>
+                    <p>{{ project.description }}</p>
+                    <a href="{{ project.url }}" class="read-more-button">Read More -></a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+
+    <!-- Application section -->
+    <section id="application" class="application-section">
+        <div class="headline-white">APPLICATIONS</div>
+        <div class="application-container">
+            {% for application in application_list %}
+            <div class="application-item">
+                <h4>{{ application.tagline }}</h4>
+                <p>{{ application.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </section>
+
+    <!-- Contact us section -->
+    <section class="contact-page" id="contact">
+        <div class="contact">
+            <div class="content">
+                <h2>Contact <span>us</span></h2>
+                <p>{{ contact_info_list.tagline }}</p>
+            </div>
+            <div class="cont-container">
+                <div class="contactInfo">
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Address</h3>
+                            <p>{{ contact_info_list.address }}</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="icon">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                        </div>
+                        <div class="text">
+                            <h3>Phone</h3>
+                            <p>{{ contact_info_list.number }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <!--  -->
+                    <form class="form-contact" method="POST">
+                      {% csrf_token %}
+                        <h2>Send Messages</h2>
+                        <div class="cont-input-box">
+                            <input name='name' type="text" class="item" id="Name" oninput="checkInputValue(this)">
+                            <span class="floating-label">Name</span>
+                            <div class="error-txt">Full name can't be blank</div>
+                        </div>
+                        <div class="cont-input-box">
+                            <input name='email' type="email" class="item" id="Email" oninput="checkInputValue(this)">
+                            <span class="floating-label">Email</span>
+                            <div class="error-txt">Email can't be blank</div>
+                        </div>
+                        <div class="cont-input-box">
+                            <textarea name='subject' class="item" id="problem"></textarea>
+                            <span class="floating-label">Subject</span>
+                            <div class="error-txt">Message can't be blank</div>
+                        </div>
+                        <div class="cont-input-box">
+                            <input type="submit" value="Send">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+      </section>
+    
+
+
+
+    <!-- Javascript for toggle menu -->
+    <script src="{% static 'main/custom.js' %}"></script>
+    <script>
+
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+        
+
+    </script>
+    
+</body>
+</html>
