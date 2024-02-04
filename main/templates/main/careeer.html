@@ -50,6 +50,44 @@
             display: block;
             width: 100%;
         }
+
+        /* Updated contact section styling */
+        .contact {
+            background-color: #f7fcfc;
+            padding: 40px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+
+        .contact h5 {
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+
+        .contact form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact form label {
+            font-weight: 600;
+        }
+
+        .contact hr {
+            border-top: 2px solid #ff8800;
+            width: 18rem;
+            margin: 10px 0;
+        }
+
+        .contact form .mb-3 {
+            margin-bottom: 20px;
+        }
+
+        .contact form .text-center {
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -62,42 +100,42 @@
                     <h1 class="fw-bold text-sm-start">Internship Training Program</h1>
                 </div>
                 <div>
-                    <a href="#appointment" class="appointment-btn scrollto"><span
-                            class="d-none d-md-inline">ENROLL FOR AN INTERNSHIP</span> </a>
-                </div>
+                    <a href="#appointment" class="btn btn-primary scrollto" style="background-color: #1D267D;">
+                        <span class="d-none d-md-inline">ENROLL FOR AN INTERNSHIP</span>
+                    </a>
+                </div>                
             </div>
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <!-- Add some space around the images -->
                     <div class="swiper-slide mx-2">
-                        <img src="{% static 'main/images/5856.jpg' %}" />
+                        <img src="{% static 'main/images/project2.jpg' %}" />
                     </div>
                     <div class="swiper-slide mx-2">
-                        <img src="{% static 'main/images/5857.jpg' %}" />
+                        <img src="{% static 'main/images/project2.jpg' %}" />
                     </div>
                     <div class="swiper-slide mx-2">
-                        <img src="{% static 'main/images/about-img.png' %}" />
+                        <img src="{% static 'main/images/project2.jpg' %}" />
                     </div>
                     <div class="swiper-slide mx-2">
-                        <img src="{% static 'main/images/5856.jpg' %}" />
+                        <img src="{% static 'main/images/project2.jpg' %}" />
                     </div>
                     <div class="swiper-slide mx-2">
-                        <img src="{% static 'main/images/5856.jpg' %}" />
+                        <img src="{% static 'main/images/project2.jpg' %}" />
                     </div>
                     <div class="swiper-slide mx-2">
-                        <img src="{% static 'main/images/5856.jpg' %}" />
+                        <img src="{% static 'main/images/project2.jpg' %}" />
                     </div>
                 </div>
                 <div class="swiper-pagination"></div>
             </div>
             <h4 class="py-3 fw-light">We offer internships to our employees prior to their commencement of a career in
-                the chemical
-                industry.</h4>
+                the chemical industry.</h4>
         </div>
     </section>
 
     <!--Job current opening-->
-    <div id="box" class="container" style="height: 400; background-color: rgb(44, 56, 125);color: rgb(244, 238, 238);">
+    <div id="box" class="container" style="height: 400; background-color: rgb(44, 56, 125); color: rgb(244, 238, 238);">
         <div class="section-title pt-5">
             <div class="col-lg-7 pt-4 pt-lg-0 content aos-init aos-animate" data-aos="fade-left">
                 <h5>JOB</h5>
@@ -132,60 +170,13 @@
             <!-- Repeat the above structure for other openings if needed -->
         </div>
     </div>
-    <div class="contact container">
-        <h5 style="font-weight: 400;">If you are interested in joining our high pace and fast-growing team, please send
-            your resume to <span style="color: rgb(255, 136, 0);">career@bhumistha.com</span> specifying your particular
-            interest and desired location. We will review your resume to find the most attractive career path within our
-            global organization.</h5>
-        <form action="https://formsubmit.co/510fca4c58dcbf49f80be352a1b2aaa5" method="POST" enctype="multipart/form-data"
-            role="form" class="php-email-form col-md-12" style="background-color: #f7fcfc;">
-            <!-- Add some margin to the form elements -->
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
-                    placeholder="name@example.com">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput2" class="form-label">Your Name</label>
-                <input type="text" class="form-control" id="exampleFormControlInput2" name="name" placeholder="Name">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlInput3" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="exampleFormControlInput3" name="phone"
-                    placeholder="Your Phone" pattern="[0-9]{10}">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlSelect1" class="form-label">Select Department</label>
-                <select class="form-select" id="exampleFormControlSelect1" name="department">
-                    <option value="">Select</option>
-                    <option value="Internship">Internship</option>
-                    <option value="Freshers">Freshers</option>
-                    <option value="Senior">Senior</option>
-                </select>
-            </div>
-            <div class="mb-3">
-                <label for="formFile" class="form-label">Upload Your Resume</label>
-                <input class="form-control" type="file" id="formFile" name="attachment">
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form>
-    </div>
-      </div>
-       </div>
-       <br>
-       <hr>
-       <br>
 
+    <!-- Updated contact section -->
     <div class="contact container">
-        <h5 style="font-weight: 400;">If you are interested in joining our high pace and fast-growing team, please send
-            your resume to <span style="color: rgb(255, 136, 0);">career@bhumistha.com</span> specifying your particular
-            interest and desired location. We will review your resume to find the most attractive career path within our
-            global organization.</h5>
+        <h2>Send Us Your Resume</h2>
+        <hr>
         <form action="https://formsubmit.co/510fca4c58dcbf49f80be352a1b2aaa5" method="POST" enctype="multipart/form-data"
-            role="form" class="php-email-form col-md-12" style="background-color: #f7fcfc;">
-            <!-- Add some margin to the form elements -->
+            role="form" class="php-email-form col-md-12">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="exampleFormControlInput1" name="email"
@@ -227,6 +218,9 @@
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: "auto",
+            autoplay: {
+                delay: 3000,
+             },
             coverflowEffect: {
                 rotate: 50,
                 stretch: 0,
