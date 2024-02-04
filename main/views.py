@@ -32,3 +32,6 @@ def index(request):
 
 def casestudy(request):
    return render(request, 'main/casestudy.html')
+
+def careers(request):
+   return render(request, 'main/careeer.html')
