@@ -10,7 +10,7 @@ from .models import Research
 from .models import Innovation
 from .models import Project
 from .models import Application
-from .models import CaseStudy
+
 
 # Register your models here.
 
@@ -25,4 +25,3 @@ admin.site.register(Research)
 admin.site.register(Innovation)
 admin.site.register(Project)
 admin.site.register(Application)
-admin.site.register(CaseStudy)
